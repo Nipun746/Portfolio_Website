@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nipun Sachdeva | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        darkBg: '#09090b',
+                        cardDark: '#121214',
+                        cardBorder: '#27272a',
+                        textMuted: '#a1a1aa',
+                        brandBlue: '#3b82f6',
+                        brandCyan: '#06b6d4',
+                        brandPurple: '#8b5cf6'
+                    },
+                    backgroundImage: {
+                        'glow-gradient': 'radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), transparent 40%), radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.15), transparent 40%)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #09090b;
+            color: #ffffff;
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+        .gradient-text-blue {
+            background: linear-gradient(to right, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-text-purple {
+            background: linear-gradient(to right, #8b5cf6, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bento-card {
+            background-color: #121214;
+            border: 1px solid #27272a;
+            border-radius: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            border-color: #3f3f46;
+        }
+
+        .hero-circle {
+            box-shadow: inset 0 0 50px rgba(59, 130, 246, 0.2), 0 0 50px rgba(139, 92, 246, 0.2);
+            animation: pulse-glow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: inset 0 0 30px rgba(59, 130, 246, 0.2), 0 0 40px rgba(139, 92, 246, 0.1); }
+            100% { box-shadow: inset 0 0 60px rgba(59, 130, 246, 0.4), 0 0 80px rgba(139, 92, 246, 0.3); }
+        }
+    </style>
+</head>
+<body class="antialiased font-sans bg-glow-gradient min-h-screen selection:bg-brandPurple/30 selection:text-white">
+
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+        <div class="flex items-center justify-between px-2 py-2 bg-[#09090b]/80 backdrop-blur-xl border border-[#27272a] rounded-full shadow-2xl">
+            
+            <div class="flex items-center space-x-3 pl-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brandPurple to-brandBlue flex items-center justify-center font-bold text-xs shadow-inner">
+                    NS
+                </div>
+                <span class="font-bold tracking-tight text-white pr-4 border-r border-[#27272a]">Nipun.dev</span>
+            </div>
+
+            <div class="hidden lg:flex items-center space-x-6 text-sm font-medium text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">Home</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#education" class="hover:text-white transition-colors">Education</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#resume" class="hover:text-white transition-colors">Resume</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center space-x-4 pr-1">
+                <a href="#" id="dashboard-btn" class="hidden md:flex items-center text-sm font-semibold text-white              hover:text-brandCyan transition-colors">
+                <!-- <i class="fas fa-sparkles text-brandCyan mr-1.5"></i> Dashboard -->
+                </a>
+                <button class="text-gray-400 hover:text-white transition-colors">
+                    <!-- <i class="far fa-sun"></i> -->
+                </button>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sachdevanipun28@gmail.com" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-sm font-bold text-white bg-gradient-to-r from-brandPurple to-brandBlue rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-brandPurple/20">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-40 pb-20">
+        
+        <section class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 mb-32 pt-10">
+            <div class="flex-1 space-y-6 z-10">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-[#27272a] bg-[#121214]/50 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-brandCyan mr-2 animate-pulse"></span>
+                    <span class="text-xs font-mono text-brandCyan font-semibold">Open to Internships</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black tracking-tight leading-none">
+                    Hey, I'm <span class="gradient-text-purple">Nipun<br>Sachdeva.</span>
+                </h1>
+                
+            
+                
+                <p class="text-textMuted text-lg max-w-xl leading-relaxed pt-2">
+                    Building data-driven solutions using Machine Learning, Analytics, and Modern Web Technologies.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#projects" class="px-6 py-3 rounded-full bg-gradient-to-r from-brandBlue to-brandCyan text-white font-semibold flex items-center hover:scale-105 transition-transform shadow-lg shadow-brandBlue/20">
+                        View Projects <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                    <a href="Nipun_Sachdeva_Resume__.pdf" download class="px-6 py-3 rounded-full border border-[#27272a] hover:bg-[#27272a] transition-colors font-semibold flex items-center">
+                        <i class="fas fa-download mr-2 text-textMuted"></i> Download Resume
+                    </a>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=sachdevanipun28@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-6 py-3 font-medium text-textMuted hover:text-white flex items-center transition-colors"
+                    >
+                    <i class="far fa-envelope mr-2"></i>
+                    Contact Me
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-4 pt-6 text-sm text-textMuted">
+                    <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Delhi, India</span>
+                    <span>•</span>
+                    <a href="https://github.com/Nipun746" target="_blank" class="hover:text-white"><i class="fab fa-github text-lg"></i></a>
+                    <a href="https://linkedin.com/in/nipunsachdeva02" target="_blank" class="hover:text-white"><i class="fab fa-linkedin text-lg"></i></a>
+                </div>
+            </div>
+
+            <div class="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] flex-shrink-0 z-0">
+                <div class="absolute -top-4 right-10 z-20 px-4 py-2 rounded-full bg-[#121214] border border-[#27272a] shadow-xl">
+                    <span class="text-xs font-mono font-bold text-white"><i class="fas fa-sparkles text-brandCyan mr-2"></i>ML · AI · Analytics</span>
+                </div>
+                <!-- <div class="absolute -bottom-4 left-10 z-20 px-4 py-2 rounded-full bg-[#121214] border border-[#27272a] shadow-xl"> -->
+                    <!-- <span class="text-xs font-mono text-textMuted">// BCA · IIT Madras</span> -->
+                <!-- </div> -->
+                
+                <div class="w-full h-full rounded-full border border-[#27272a] bg-[#09090b] hero-circle flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brandPurple/10 to-brandBlue/10 opacity-50"></div>
+                    <span class="text-8xl md:text-[120px] font-black gradient-text-purple tracking-tighter z-10">NS</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-32">
+            <p class="text-xs font-bold tracking-widest text-brandCyan mb-2 uppercase">About</p>
+            <h2 class="text-5xl md:text-6xl font-black tracking-tight mb-12">
+                Curious by nature. <span class="gradient-text-blue">Builder by craft.</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-7 bento-card p-8 md:p-10 flex flex-col justify-between">
+                    <p class="text-gray-300 text-lg leading-relaxed mb-10">
+                        I am Nipun Sachdeva, a BCA student at Maharaja Surajmal Institute (GGSIPU) and a BS in Data Science and Applications student at IIT Madras. I am passionate about Data Science, Machine Learning, Artificial Intelligence, Analytics, and Software Development. I enjoy building practical projects that combine data, automation, and intelligent systems. My current focus is on strengthening my foundations in machine learning, data analytics, Python development, and modern AI technologies while building a portfolio of impactful real-world projects.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-auto">
+                        <div class="bg-[#18181b] rounded-xl p-4 border border-[#27272a]">
+                            <p class="text-xs text-textMuted font-mono mb-1">role</p>
+                            <p class="text-sm font-semibold text-white font-mono">DS / ML Student</p>
+                        </div>
+                        <div class="bg-[#18181b] rounded-xl p-4 border border-[#27272a]">
+                            <p class="text-xs text-textMuted font-mono mb-1">location</p>
+                            <p class="text-sm font-semibold text-white font-mono">Delhi, India</p>
+                        </div>
+                        <div class="bg-[#18181b] rounded-xl p-4 border border-[#27272a]">
+                            <p class="text-xs text-textMuted font-mono mb-1">focus</p>
+                            <p class="text-sm font-semibold text-white font-mono">ML · Analytics · GenAI</p>
+                        </div>
+                        <div class="bg-[#18181b] rounded-xl p-4 border border-[#27272a]">
+                            <p class="text-xs text-textMuted font-mono mb-1">status</p>
+                            <p class="text-sm font-semibold text-white font-mono">Open to Internships</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 grid grid-cols-2 gap-6">
+                    <div class="bento-card p-8 flex flex-col justify-center text-center">
+                        <i class="fas fa-code text-brandBlue text-2xl mb-4"></i>
+                        <h3 class="text-4xl font-bold text-brandBlue mb-2">4+</h3>
+                        <p class="text-xs text-textMuted uppercase tracking-wider font-bold">Featured Projects</p>
+                    </div>
+                    <div class="bento-card p-8 flex flex-col justify-center text-center">
+                        <i class="fas fa-database text-brandCyan text-2xl mb-4"></i>
+                        <h3 class="text-4xl font-bold text-brandCyan mb-2">30+</h3>
+                        <p class="text-xs text-textMuted uppercase tracking-wider font-bold">Tech & Tools</p>
+                    </div>
+                    <div class="bento-card p-8 flex flex-col justify-center text-center">
+                        <i class="fas fa-sparkles text-brandBlue text-2xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-brandBlue mb-2">DS · ML · Web</h3>
+                        <p class="text-xs text-textMuted uppercase tracking-wider font-bold">Domains Explored</p>
+                    </div>
+                    <div class="bento-card p-8 flex flex-col justify-center text-center">
+                        <i class="fas fa-book-open text-brandPurple text-2xl mb-4"></i>
+                        <h3 class="text-3xl font-bold text-brandPurple mb-2">8 Topics</h3>
+                        <p class="text-xs text-textMuted uppercase tracking-wider font-bold">Currently Learning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="mb-32">
+            <p class="text-xs font-bold tracking-widest text-brandCyan mb-2 uppercase">Education</p>
+            <h2 class="text-5xl font-black tracking-tight mb-4">
+                Academic <span class="gradient-text-blue">Foundation.</span>
+            </h2>
+            <p class="text-textMuted text-lg mb-10">Dual-degree path combining computer applications with rigorous data science.</p>
+
+            <div class="space-y-6 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-brandPurple before:via-brandBlue before:to-transparent">
+                
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-[#09090b] bg-brandPurple text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bento-card p-6">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
+                            <h3 class="font-bold text-xl text-white">Bachelor's of Computer Applications (Hons.)</h3>
+                            <span class="text-xs font-mono text-brandCyan bg-brandCyan/10 px-2 py-1 rounded border border-brandCyan/20 whitespace-nowrap">2024 — Present</span>
+                        </div>
+                        <p class="text-sm font-semibold text-gray-400 mb-4">Maharaja Surajmal Institute (GGSIPU)</p>
+                        <p class="text-sm text-textMuted leading-relaxed">Core CS foundations, DSA, software engineering, and web technologies.</p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-[#09090b] bg-brandBlue text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bento-card p-6">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
+                            <h3 class="font-bold text-xl text-white">BS in Data Science and Applications</h3>
+                            <span class="text-xs font-mono text-brandCyan bg-brandCyan/10 px-2 py-1 rounded border border-brandCyan/20 whitespace-nowrap">2024 — Present</span>
+                        </div>
+                        <p class="text-sm font-semibold text-gray-400 mb-4">Indian Institute of Technology Madras</p>
+                        <p class="text-sm text-textMuted leading-relaxed">Statistics, Python, ML foundations, data analytics, and applied projects.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="mb-32">
+            <p class="text-xs font-bold tracking-widest text-brandCyan mb-2 uppercase">Skills</p>
+            <h2 class="text-5xl font-black tracking-tight mb-4">
+                Tech <span class="gradient-text-purple">Toolbox.</span>
+            </h2>
+            <p class="text-textMuted text-lg mb-10">A bento grid of languages, libraries and tools I actively use.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bento-card p-6">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="font-bold text-xl text-white">Languages</h3>
+                        <span class="text-xs text-textMuted font-mono">8 items</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Python</span><span class="text-textMuted font-mono">90%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">SQL</span><span class="text-textMuted font-mono">85%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">HTML/CSS</span><span class="text-textMuted font-mono">90%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">JavaScript</span><span class="text-textMuted font-mono">75%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 75%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">PHP</span><span class="text-textMuted font-mono">70%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 70%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">C</span><span class="text-textMuted font-mono">70%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 70%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Java</span><span class="text-textMuted font-mono">65%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card p-6">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="font-bold text-xl text-white">ML & Data Science</h3>
+                        <span class="text-xs text-textMuted font-mono">5 items</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Pandas</span><span class="text-textMuted font-mono">85%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">NumPy</span><span class="text-textMuted font-mono">80%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Scikit-Learn</span><span class="text-textMuted font-mono">75%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 75%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Machine Learning</span><span class="text-textMuted font-mono">75%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 75%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">EDA</span><span class="text-textMuted font-mono">85%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card p-6">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="font-bold text-xl text-white">Tools & Vis</h3>
+                        <span class="text-xs text-textMuted font-mono">6 items</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Tableau</span><span class="text-textMuted font-mono">80%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Matplotlib</span><span class="text-textMuted font-mono">85%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Git & GitHub</span><span class="text-textMuted font-mono">85%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Jupyter / Colab</span><span class="text-textMuted font-mono">90%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Excel / Sheets</span><span class="text-textMuted font-mono">90%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1 font-bold"><span class="text-gray-200">Prompt Engineering</span><span class="text-textMuted font-mono">85%</span></div>
+                            <div class="w-full bg-[#1f1f22] rounded-full h-1.5"><div class="bg-brandBlue h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-32">
+            <p class="text-xs font-bold tracking-widest text-brandCyan mb-2 uppercase">Projects</p>
+            <h2 class="text-5xl font-black tracking-tight mb-4">
+                Things I've <span class="gradient-text-purple">built.</span>
+            </h2>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+                <p class="text-textMuted text-lg">Selected work across machine learning, analytics, and web platforms.</p>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="relative bg-[#121214] border border-[#27272a] rounded-full flex items-center px-4 py-2">
+                        <i class="fas fa-search text-textMuted text-sm mr-2"></i>
+                        <input type="text" placeholder="Search projects" class="bg-transparent text-sm text-white focus:outline-none w-32 placeholder-textMuted">
+                    </div>
+                    <div class="flex bg-[#121214] p-1 rounded-full border border-[#27272a]">
+                        <button class="px-5 py-2 rounded-full bg-brandPurple text-white text-sm font-semibold shadow-sm">All</button>
+                        <button class="px-5 py-2 rounded-full text-textMuted hover:text-white text-sm font-medium transition-colors">Machine Learning</button>
+                        <button class="px-5 py-2 rounded-full text-textMuted hover:text-white text-sm font-medium transition-colors">Web Development</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bento-card p-8 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <p class="text-xs font-mono font-bold text-brandCyan uppercase tracking-widest">Machine Learning</p>
+                        <span class="flex items-center text-xs font-mono px-3 py-1 border border-yellow-900/50 text-yellow-500 rounded-full bg-yellow-500/10 font-semibold">
+                            <i class="fas fa-star mr-1.5 text-[10px]"></i> In Progress
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">F1 Race Strategy Predictor</h3>
+                    <p class="text-textMuted text-sm mb-8 leading-relaxed">
+                        Using Python, Pandas, Scikit-learn, and FastF1 API to analyze race telemetry, lap times, tire degradation, and circuit data. Currently developing and training ML models with feature engineering to predict optimal pit-stop strategies.
+                    </p>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Python</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Pandas</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Scikit-Learn</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">FastF1 API</span>
+                    </div>
+                </div>
+
+                <div class="bento-card p-8 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <p class="text-xs font-mono font-bold text-brandCyan uppercase tracking-widest">Machine Learning</p>
+                        <!-- <span class="flex items-center text-xs font-mono px-3 py-1 border border-green-900/50 text-green-400 rounded-full bg-[#0a150f] font-semibold"> -->
+                            <!-- Live -->
+                        <!-- </span> -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Car Price Predictor</h3>
+                    <p class="text-textMuted text-sm mb-8 leading-relaxed">
+                        Built a car price prediction web app using Python, Flask, HTML/CSS, and Scikit-learn that estimates resale prices based on car details like company, model, year, fuel type, and kilometers driven.
+                    </p>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Python</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Flask</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Scikit-Learn</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="bento-card p-8 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <p class="text-xs font-mono font-bold text-brandCyan uppercase tracking-widest">Web Development</p>
+                        <!-- <span class="flex items-center text-xs font-mono px-3 py-1 border border-green-900/50 text-green-400 rounded-full bg-[#0a150f] font-semibold"> -->
+                            <!-- Live -->
+                        <!-- </span> -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">PulseTech</h3>
+                    <p class="text-textMuted text-sm mb-8 leading-relaxed">
+                        Built a tech news website using PHP, MySQL, HTML/CSS, and JavaScript that scrapes content from given URLs and automatically publishes formatted articles using predefined templates.
+                    </p>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">PHP</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">MySQL</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">JavaScript</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Web Scraping</span>
+                    </div>
+                </div>
+
+                <div class="bento-card p-8 flex flex-col h-full relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-4">
+                        <p class="text-xs font-mono font-bold text-brandCyan uppercase tracking-widest">Web Development</p>
+                        <span class="flex items-center text-xs font-mono px-3 py-1 border border-green-900/50 text-green-400 rounded-full bg-[#0a150f] font-semibold">
+                            Live
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Personal Portfolio Website</h3>
+                    <p class="text-textMuted text-sm mb-8 leading-relaxed">
+                        Building and deploying a responsive portfolio website using HTML, CSS, JavaScript, and GitHub to showcase projects. Implementing modern UI design and prompt-engineering techniques to accelerate development.
+                    </p>
+                    <div class="mt-auto flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">HTML5</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">CSS</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">JavaScript</span>
+                        <span class="px-3 py-1.5 bg-[#18181b] rounded-md text-xs font-mono text-gray-300 border border-[#27272a]">Prompt Engineering</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="experience" class="mb-32">
+            <p class="text-xs font-bold tracking-widest text-brandCyan mb-2 uppercase">Experience</p>
+            <h2 class="text-5xl font-black tracking-tight mb-12">
+                Where I've <span class="gradient-text-blue">worked.</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="md:col-span-2 bento-card p-10 relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="flex items-center space-x-5">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brandPurple to-brandBlue flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-chart-bar text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-1">Data Analytics Virtual Intern</h3>
+                                <p class="text-textMuted text-base font-medium">Deloitte (via Forage)</p>
+                            </div>
+                        </div>
+                        <span class="text-brandCyan text-sm font-mono font-bold">06/2026</span>
+                    </div>
+                    
+                    <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 rounded-full bg-brandPurple mt-2 mr-4 flex-shrink-0"></span>
+                            <span>Cleaned, transformed, and prepared raw datasets using Excel and Tableau data preparation techniques to ensure data accuracy and consistency for reporting.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 rounded-full bg-brandPurple mt-2 mr-4 flex-shrink-0"></span>
+                            <span>Designed and developed interactive Tableau dashboards to visualize key business metrics, enabling stakeholders to monitor performance and make informed decisions.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 rounded-full bg-brandPurple mt-2 mr-4 flex-shrink-0"></span>
+                            <span>Conducted exploratory data analysis (EDA) to identify trends, patterns, outliers, and actionable insights from client datasets.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 rounded-full bg-brandPurple mt-2 mr-4 flex-shrink-0"></span>
+                            <span>Developed data-driven recommendations and presented findings through Tableau visualizations and reports, simulating real-world client consulting engagements.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-1 bento-card p-10 flex flex-col justify-center">
+                    <p class="text-xs font-mono font-bold text-brandCyan uppercase tracking-widest mb-4">Open</p>
+                    <h3 class="text-3xl font-black mb-4 text-white leading-tight">Looking for the next chapter</h3>
+                    <p class="text-textMuted text-sm mb-10 leading-relaxed">
+                        Internships in Data Science, ML, Analytics, or Software Development. Happy to collaborate on open-source and research projects.
+                    </p>
+                    <div class="space-y-2 border-t border-[#27272a] pt-4 mt-auto">
+                        <p class="text-sm font-mono"><span class="text-textMuted">availability:</span> <span class="font-semibold text-white">Remote / Delhi NCR</span></p>
+                        <p class="text-sm font-mono"><span class="text-textMuted">start:</span> <span class="font-semibold text-white">Flexible</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="resume" class="mb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-xs font-bold tracking-widest text-brandCyan mb-2 uppercase">Resume</p>
+                    <h2 class="text-5xl font-black tracking-tight mb-6">
+                        One page. <span class="gradient-text-purple">All the proof.</span>
+                    </h2>
+                    <p class="text-textMuted text-lg mb-8 max-w-md">
+                        Grab the latest ATS-friendly PDF, or scan the key highlights below. Updated regularly with new projects, skills and milestones.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="Nipun_Sachdeva_Resume__.pdf" download class="px-6 py-3 rounded-full bg-brandBlue hover:bg-blue-600 text-white font-semibold flex items-center transition-colors shadow-lg shadow-brandBlue/20">
+                            <i class="fas fa-download mr-2"></i> Download PDF
+                        </a>
+                        <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=sachdevanipun28@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-6 py-3 rounded-full border border-[#27272a] text-white font-semibold flex items-center hover:bg-[#27272a] transition-colors"
+                            >
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Email Request
+                            </a>
+                    </div>
+                    <p class="text-xs font-mono text-textMuted mt-6">last_updated: <span class="text-white">June 2026</span></p>
+                </div>
+                
+                <div class="bento-card p-8">
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brandPurple to-brandBlue flex items-center justify-center text-white mr-4 shadow-lg shadow-brandPurple/20">
+                            <i class="fas fa-file-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Nipun_Sachdeva_Resume.pdf</h3>
+                            <p class="text-xs text-textMuted">PDF • ATS-friendly • 1 page</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between border-b border-[#27272a] pb-3">
+                            <span class="text-textMuted">Education</span>
+                            <span class="font-mono text-white text-right">IIT Madras · MSI GGSIPU</span>
+                        </div>
+                        <div class="flex justify-between border-b border-[#27272a] pb-3">
+                            <span class="text-textMuted">Focus</span>
+                            <span class="font-mono text-white text-right">Data Science · ML · Analytics</span>
+                        </div>
+                        <div class="flex justify-between border-b border-[#27272a] pb-3">
+                            <span class="text-textMuted">Internship</span>
+                            <span class="font-mono text-white text-right">Deloitte Forage (2026)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-[#27272a] pb-3">
+                            <span class="text-textMuted">Projects</span>
+                            <span class="font-mono text-white text-right">4+ shipped, 1 in progress</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-textMuted">Tools</span>
+                            <span class="font-mono text-white text-right">Python · Pandas · Sklearn · Tableau</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-[#27272a] mb-8" />
+        <footer class="flex flex-col md:flex-row justify-between items-center text-sm text-textMuted pb-10 gap-4">
+            <p>Designed & Built by Nipun Sachdeva &copy; <script>document.write(new Date().getFullYear())</script></p>
+            <div class="flex space-x-6">
+                <a href="https://github.com/Nipun746" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-github text-lg"></i></a>
+                <a href="https://linkedin.com/in/nipunsachdeva02" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sachdevanipun28@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"><i class="fas fa-envelope text-lg"></i></a>
+            </div>
+        </footer>
+
+    </main>
+            
+</body>
+</html>
